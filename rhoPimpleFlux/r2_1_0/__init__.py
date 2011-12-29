@@ -93,7 +93,7 @@ def fun_Ueqn( pimple, rho, p, U, phi, K, turbulence ):
 #---------------------------------------------------------------------------
 def fun_hEqn( thermo, rho, p, h, phi, turbulence, dpdt, K ):
     hEqn = ( ref.fvm.ddt( rho, h ) + ref.fvm.div( phi, h ) - ref.fvm.laplacian( turbulence.alphaEff(), h ) 
-             == dpdt() - ( ref.fvc.ddt( rho, K ) + ref.fvc.div( phi, K ) ) )
+             == dpdt() - ( ref.fvc.ddt( rho, K ) + ref.fvc.div( phi, K ) ) ) # mixed calculations
 
     hEqn.relax()
     hEqn.solve()
