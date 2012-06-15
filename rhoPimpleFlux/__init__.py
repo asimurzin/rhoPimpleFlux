@@ -38,13 +38,13 @@ if FOAM_BRANCH_VERSION( "dev", ">=", "010600" ):
 
    
 #--------------------------------------------------------------------------------------
-if FOAM_REF_VERSION( ">=", "010700" ):
+if FOAM_REF_VERSION( "==", "010700" ) or FOAM_REF_VERSION( "==", "010701" ):
     from rhoPimpleFlux.r1_7_0 import *
     pass
 
 
 #--------------------------------------------------------------------------------------
-if FOAM_REF_VERSION( ">=", "020000" ):
+if FOAM_REF_VERSION( "==", "020000" ) or FOAM_REF_VERSION( "==", "020001" ):
     from rhoPimpleFlux.r2_0_0 import *
     pass
 
